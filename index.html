@@ -1,118 +1,43 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Portfolio E5 BTS SIO SISR"><title>Portfolio E5 | Jason Tassoua-Liboukou</title><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-:root{--bg:#07111f;--bg2:#0b1728;--card:#0e1d31;--line:#1b3049;--text:#edf5ff;--muted:#91a4ba;--blue:#55a9ff;--cyan:#62d7ff;--max:1120px}
+:root{--bg:#07111f;--bg2:#0b1728;--card:#0e1d31;--line:#1b3049;--text:#edf5ff;--muted:#91a4ba;--blue:#55a9ff;--cyan:#62d7ff;--green:#76e0a0;--orange:#ffb35c;--max:1120px}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}a{color:inherit;text-decoration:none}.container{width:min(92%,var(--max));margin:auto}
-.header{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.9);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:800;letter-spacing:-1px}.logo span{color:var(--blue)}.nav-links{display:flex;gap:25px}.nav-links a{color:var(--muted);font-size:14px;font-weight:600}.nav-links a:hover,.nav-links .active{color:var(--text)}.menu-btn{display:none;background:none;border:0;color:white;font-size:25px}
+.header{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.9);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:800;letter-spacing:-1px}.logo span{color:var(--blue)}.nav-links{display:flex;gap:25px}.nav-links button{background:none;border:0;cursor:pointer;font-family:inherit;color:var(--muted);font-size:14px;font-weight:600}.nav-links button:hover,.nav-links .active{color:var(--text)}.menu-btn{display:none;background:none;border:0;color:white;font-size:25px;cursor:pointer}
 .hero{min-height:650px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}.hero h1{font-size:clamp(48px,7vw,82px);line-height:1.02;letter-spacing:-4px}.hero h1 span{color:var(--blue)}.hero-text{max-width:650px;color:var(--muted);font-size:18px;margin:25px 0}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700;font-size:14px}.primary{background:var(--blue);color:#06101d}.secondary{border:1px solid var(--line);background:var(--card)}
-.terminal{background:#050b14;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 20px 60px rgba(0,0,0,.25);font-family:monospace;font-size:14px}.terminal-top{display:flex;gap:7px;margin-bottom:22px}.terminal-top i{width:10px;height:10px;border-radius:50%;background:#526273}.terminal p{margin:10px 0}.green{color:#76e0a0}.blue{color:var(--cyan)}.muted{color:var(--muted)}
-.section{padding:95px 0}.dark-section,.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.section-heading{max-width:720px;margin-bottom:38px}.section h2,.page-header h1{font-size:clamp(30px,5vw,48px);line-height:1.1;letter-spacing:-1.5px}.section-heading>p:last-child,.page-header>p:last-child{color:var(--muted);margin-top:12px}.cards{display:grid;gap:18px}.cards.three{grid-template-columns:repeat(3,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}.card h3{margin:8px 0}.card p{color:var(--muted)}.number{color:var(--blue);font-weight:800}.link-card{transition:.2s}.link-card:hover{transform:translateY(-4px);border-color:#315a82}
-.page-header{padding:105px 0 55px}.page-header h1{font-size:clamp(45px,7vw,70px)}.two-col{display:grid;grid-template-columns:1.4fr .8fr;gap:60px}.two-col p{color:var(--muted);margin:14px 0}.info-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;height:max-content}.info-box p{margin:4px 0}.timeline{border-left:1px solid #29445f;margin-left:8px}.timeline-item{padding:0 0 35px 30px;position:relative}.timeline-item:before{content:"";position:absolute;left:-6px;top:9px;width:11px;height:11px;background:var(--blue);border-radius:50%}.timeline-item span{font-size:12px;color:var(--blue);font-weight:800;text-transform:uppercase}.timeline-item p{color:var(--muted)}.cv-section{display:flex;align-items:center;justify-content:space-between;gap:30px}
-.notice{padding:18px 22px;background:#0b2036;border:1px solid #21496d;border-radius:12px;margin-bottom:30px;color:#c7d9ec}.realisation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;min-height:230px}.project-card h2{font-size:24px;margin:15px 0 10px}.project-card p{color:var(--muted)}.project-card a{display:inline-block;color:var(--blue);font-weight:700;margin-top:20px}.tag{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:1px}
-.detail{display:grid;grid-template-columns:1fr 1fr;gap:18px}.detail article{background:var(--card);border:1px solid var(--line);padding:30px;border-radius:16px}.detail h2{font-size:24px;margin:10px 0}.detail p{color:var(--muted)}.step{color:var(--blue);font-weight:800}
+.terminal{background:#050b14;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 20px 60px rgba(0,0,0,.25);font-family:monospace;font-size:14px}.terminal-top{display:flex;gap:7px;margin-bottom:22px}.terminal-top i{width:10px;height:10px;border-radius:50%;background:#526273}.terminal p{margin:10px 0}.green{color:var(--green)}.blue{color:var(--cyan)}.muted{color:var(--muted)}
+.section{padding:95px 0}.dark-section,.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.section-heading{max-width:720px;margin-bottom:38px}.section h2,.page-header h1{font-size:clamp(30px,5vw,48px);line-height:1.1;letter-spacing:-1.5px}.section-heading>p:last-child,.page-header>p:last-child{color:var(--muted);margin-top:12px}.cards{display:grid;gap:18px}.cards.three{grid-template-columns:repeat(3,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}.card h3{margin:8px 0}.card p{color:var(--muted)}.number{color:var(--blue);font-weight:800}.link-card{transition:.2s;cursor:pointer}.link-card:hover{transform:translateY(-4px);border-color:#315a82}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}.stat b{display:block;font-size:30px;color:var(--blue);line-height:1.2}.stat span{color:var(--muted);font-size:13px}
+.page-header{padding:105px 0 55px}.page-header h1{font-size:clamp(40px,7vw,64px)}.two-col{display:grid;grid-template-columns:1.4fr .8fr;gap:60px}.two-col p{color:var(--muted);margin:14px 0}.info-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;height:max-content}.info-box p{margin:4px 0}.timeline{border-left:1px solid #29445f;margin-left:8px}.timeline-item{padding:0 0 35px 30px;position:relative}.timeline-item:before{content:"";position:absolute;left:-6px;top:9px;width:11px;height:11px;background:var(--blue);border-radius:50%}.timeline-item span{font-size:12px;color:var(--blue);font-weight:800;text-transform:uppercase}.timeline-item p{color:var(--muted)}.cv-section{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.notice{padding:18px 22px;background:#0b2036;border:1px solid #21496d;border-radius:12px;margin-bottom:30px;color:#c7d9ec}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.filters button{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);font:600 13px Inter,Arial,sans-serif;cursor:pointer}.filters button.on{background:var(--blue);color:#06101d;border-color:var(--blue)}
+.realisation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;min-height:260px;display:flex;flex-direction:column}.project-card h2{font-size:22px;margin:12px 0 10px;line-height:1.3}.project-card p{color:var(--muted)}.project-card a{display:inline-block;color:var(--blue);font-weight:700;margin-top:auto;padding-top:20px}.tag{font-size:11px;font-weight:800;letter-spacing:1px;padding:4px 9px;border-radius:6px;display:inline-block;width:max-content}.tag.cours{color:var(--cyan);background:#0f2a44}.tag.ent{color:var(--orange);background:#33240f}.tag.todo{color:var(--muted);background:#132235}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.chips span{font-size:11px;padding:3px 8px;border:1px solid #234766;border-radius:6px;color:#bfe4ff}
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:18px}.detail article{background:var(--card);border:1px solid var(--line);padding:30px;border-radius:16px}.detail article.wide{grid-column:1/-1}.detail h2{font-size:24px;margin:10px 0}.detail p{color:var(--muted);margin-bottom:8px}.detail ul{color:var(--muted);padding-left:20px}.detail li{margin:4px 0}.detail strong{color:var(--text)}.step{color:var(--blue);font-weight:800}.back{display:inline-block;color:var(--blue);font-weight:700;margin-bottom:18px;cursor:pointer;background:none;border:0;font:700 14px Inter,Arial,sans-serif}
+.todo-note{color:var(--orange)!important;font-size:13px}
 .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.skill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}.skill>span{color:var(--blue);font-weight:800}.skill h2{font-size:23px;margin:9px 0}.skill p{color:var(--muted)}.skill-proof{border-top:1px solid var(--line);margin-top:18px;padding-top:14px;color:#c4d5e6;font-size:13px}
-.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:14px;border-bottom:1px solid var(--line)}th{background:#102238;font-size:12px;color:var(--blue)}td{color:var(--muted)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:14px;border-bottom:1px solid var(--line)}th{background:#102238;font-size:12px;color:var(--blue)}td{color:var(--muted)}td.ok{color:var(--green);font-weight:800}
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}.contact-card>span{font-size:24px;color:var(--blue)}.contact-card h2{margin:10px 0}.contact-card p{color:var(--muted)}
 footer{border-top:1px solid var(--line);padding:25px 0}.footer-content{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}.footer-content a{color:var(--blue)}
-@media(max-width:800px){.menu-btn{display:block}.nav-links{display:none;position:absolute;top:72px;left:0;width:100%;padding:20px;background:var(--bg2);flex-direction:column;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.hero,.two-col,.detail{grid-template-columns:1fr}.cards.three,.realisation-grid,.skills-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:70px 0}.terminal{margin-bottom:30px}.cv-section{display:block}.cv-section .btn{margin-top:20px}.hero h1{letter-spacing:-2px}.section{padding:70px 0}}
+.veille-topic{margin-top:18px;padding:22px 24px;background:linear-gradient(135deg,rgba(85,169,255,.10),rgba(98,215,255,.04));border:1px solid #28547d;border-radius:16px}.veille-topic .label{display:block;margin-bottom:6px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.veille-topic strong{font-size:20px;line-height:1.35}.veille-list{margin-top:14px;display:grid;gap:10px}.veille-list p{margin:0;color:var(--muted)}.veille-list b{color:var(--text)}.veille-section-title{margin:0 0 24px}.veille-fiche{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}.veille-fiche-head{padding:26px 28px;background:#0b2036;border-bottom:1px solid var(--line)}.veille-fiche-head .fiche-number{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.veille-fiche-head h2{font-size:28px;margin:8px 0 12px}.veille-meta{display:flex;gap:10px;flex-wrap:wrap}.veille-meta span{padding:6px 10px;border:1px solid #294765;border-radius:999px;color:#bdd0e4;font-size:12px}.veille-fiche-body{padding:30px 28px}.veille-block{margin-bottom:28px}.veille-block:last-child{margin-bottom:0}.veille-block h3{font-size:18px;margin-bottom:10px}.veille-block p{color:var(--muted);margin:0 0 12px}.veille-block p:last-child{margin-bottom:0}.veille-tags{display:flex;flex-wrap:wrap;gap:9px}.veille-tag{padding:7px 10px;border-radius:8px;background:#102843;border:1px solid #234766;color:#bfe4ff;font-size:12px;font-weight:700}.veille-source-link{display:inline-block;margin-top:8px;color:var(--blue);font-weight:700}.veille-source-link:hover{text-decoration:underline}.veille-conclusion{padding:18px 20px;border-left:3px solid var(--blue);background:#0a1a2d;border-radius:0 12px 12px 0}
+.cv-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;width:100%}.cv-card p{color:var(--muted);margin-top:8px}.cv-actions{display:flex;gap:10px;flex-wrap:wrap}.cv-note{font-size:12px;color:var(--muted);margin-top:8px}.veille-fiche+.veille-fiche{margin-top:26px}.veille-update{display:inline-block;margin-top:16px;padding:7px 11px;border:1px solid #294765;border-radius:999px;color:#bdd0e4;font-size:12px;background:rgba(14,29,49,.55)}
+@media(max-width:800px){.menu-btn{display:block}.nav-links{display:none;position:absolute;top:72px;left:0;width:100%;padding:20px;background:var(--bg2);flex-direction:column;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.hero,.two-col,.detail{grid-template-columns:1fr}.cards.three,.realisation-grid,.skills-grid,.contact-grid,.stats{grid-template-columns:1fr}.hero{padding:70px 0}.terminal{margin-bottom:30px}.cv-section{display:block}.hero h1{letter-spacing:-2px}.section{padding:70px 0}.veille-fiche-head,.veille-fiche-body{padding:22px 20px}.veille-fiche-head h2{font-size:23px}.cv-card{grid-template-columns:1fr}.cv-actions{width:100%}.cv-actions .btn{flex:1;text-align:center}}
+.page{display:none}.page.active{display:block}</style></head><body>
+<header class="header"><nav class="nav container"><a class="logo" href="#" onclick="showPage('accueil');return false">JTL<span>.</span></a><button class="menu-btn" onclick="toggleMenu()">☰</button><div class="nav-links" id="nav"><button onclick="showPage('accueil')">Accueil</button><button onclick="showPage('apropos')">À propos</button><button onclick="showPage('realisations')">Réalisations</button><button onclick="showPage('competences')">Compétences</button><button onclick="showPage('veille')">Veille</button><button onclick="showPage('contact')">Contact</button></div></nav></header>
+<main>
 
-/* ===== VEILLE TECHNOLOGIQUE ===== */
-.veille-topic{
-  margin-top:18px;
-  padding:22px 24px;
-  background:linear-gradient(135deg,rgba(85,169,255,.10),rgba(98,215,255,.04));
-  border:1px solid #28547d;
-  border-radius:16px;
-}
-.veille-topic .label{
-  display:block;
-  margin-bottom:6px;
-  color:var(--blue);
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-}
-.veille-topic strong{font-size:20px;line-height:1.35}
-.veille-list{margin-top:14px;display:grid;gap:10px}
-.veille-list p{margin:0;color:var(--muted)}
-.veille-list b{color:var(--text)}
-.veille-section-title{margin:0 0 24px}
-.veille-fiche{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-}
-.veille-fiche-head{
-  padding:26px 28px;
-  background:#0b2036;
-  border-bottom:1px solid var(--line);
-}
-.veille-fiche-head .fiche-number{
-  color:var(--cyan);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-}
-.veille-fiche-head h2{font-size:28px;margin:8px 0 12px}
-.veille-meta{display:flex;gap:10px;flex-wrap:wrap}
-.veille-meta span{
-  padding:6px 10px;
-  border:1px solid #294765;
-  border-radius:999px;
-  color:#bdd0e4;
-  font-size:12px;
-}
-.veille-fiche-body{padding:30px 28px}
-.veille-block{margin-bottom:28px}
-.veille-block:last-child{margin-bottom:0}
-.veille-block h3{font-size:18px;margin-bottom:10px}
-.veille-block p{color:var(--muted);margin:0 0 12px}
-.veille-block p:last-child{margin-bottom:0}
-.veille-tags{display:flex;flex-wrap:wrap;gap:9px}
-.veille-tag{
-  padding:7px 10px;
-  border-radius:8px;
-  background:#102843;
-  border:1px solid #234766;
-  color:#bfe4ff;
-  font-size:12px;
-  font-weight:700;
-}
-.veille-source-link{
-  display:inline-block;
-  margin-top:8px;
-  color:var(--blue);
-  font-weight:700;
-}
-.veille-source-link:hover{text-decoration:underline}
-.veille-conclusion{
-  padding:18px 20px;
-  border-left:3px solid var(--blue);
-  background:#0a1a2d;
-  border-radius:0 12px 12px 0;
-}
-@media(max-width:800px){
-  .veille-fiche-head,.veille-fiche-body{padding:22px 20px}
-  .veille-fiche-head h2{font-size:23px}
-}
-
-.cv-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;width:100%}
-.cv-card p{color:var(--muted);margin-top:8px}.cv-actions{display:flex;gap:10px;flex-wrap:wrap}.cv-note{font-size:12px;color:var(--muted);margin-top:8px}.veille-fiche+.veille-fiche{margin-top:26px}.veille-update{display:inline-block;margin-top:16px;padding:7px 11px;border:1px solid #294765;border-radius:999px;color:#bdd0e4;font-size:12px;background:rgba(14,29,49,.55)}
-@media(max-width:800px){.cv-card{grid-template-columns:1fr}.cv-actions{width:100%}.cv-actions .btn{flex:1;text-align:center}}
-
-.page{display:none}.page.active{display:block}</style></head><body><header class="header"><nav class="nav container"><a class="logo" href="#" onclick="showPage('accueil');return false">JTL<span>.</span></a><button class="menu-btn" onclick="toggleMenu()">☰</button><div class="nav-links" id="nav"><button onclick="showPage('accueil')">Accueil</button><button onclick="showPage('apropos')">À propos</button><button onclick="showPage('realisations')">Réalisations</button><button onclick="showPage('competences')">Compétences</button><button onclick="showPage('veille')">Veille</button><button onclick="showPage('contact')">Contact</button></div></nav></header><main><section id="accueil" class="page">
+<!-- ================= ACCUEIL ================= -->
+<section id="accueil" class="page">
   <section class="hero container">
     <div class="hero-content">
       <p class="eyebrow">BTS SIO · SISR · Épreuve E5</p>
       <h1>Mon portfolio<br><span>informatique.</span></h1>
-      <p class="hero-text">
-        Je présente ici mon parcours, mes projets, mes réalisations techniques
-        et les preuves de compétences développées pendant ma formation.
-      </p>
+      <p class="hero-text">Étudiant en BTS SIO option SISR, je présente ici mes réalisations en formation (virtualisation, réseaux) et en entreprise (support et réparation informatique), avec les preuves de compétences associées.</p>
       <div class="buttons">
         <a class="btn primary" href="#" onclick="showPage('realisations');return false">Voir mes réalisations</a>
-        <a class="btn secondary" href="#" onclick="showPage('a-propos');return false">Découvrir mon parcours</a>
+        <a class="btn secondary" href="#" onclick="showPage('apropos');return false">Découvrir mon parcours</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>2</b><span>projets en formation</span></div>
+        <div class="stat"><b>1</b><span>expérience en entreprise</span></div>
+        <div class="stat"><b>6</b><span>compétences du Bloc 1</span></div>
       </div>
     </div>
     <div class="hero-card">
@@ -120,9 +45,10 @@ footer{border-top:1px solid var(--line);padding:25px 0}.footer-content{display:f
         <div class="terminal-top"><i></i><i></i><i></i></div>
         <p><span class="green">jason@portfolio</span>:~$ whoami</p>
         <p class="muted">Étudiant BTS SIO — SISR</p>
-        <p><span class="green">jason@portfolio</span>:~$ status</p>
-        <p class="blue">● En formation</p>
-        <p><span class="green">jason@portfolio</span>:~$ portfolio --start</p>
+        <p><span class="green">jason@portfolio</span>:~$ ls projets/</p>
+        <p class="blue">proxmox-medilog/ &nbsp;packet-tracer-vlan/ &nbsp;stage-reparation/</p>
+        <p><span class="green">jason@portfolio</span>:~$ ping 192.168.1.190</p>
+        <p class="muted">Réponse de 192.168.1.190 : temps&lt;1ms TTL=128</p>
         <p class="blue">Portfolio E5 chargé ✓</p>
       </div>
     </div>
@@ -132,51 +58,48 @@ footer{border-top:1px solid var(--line);padding:25px 0}.footer-content{display:f
     <div class="section-heading">
       <p class="eyebrow">Le portfolio</p>
       <h2>Un dossier de preuves pour l'E5</h2>
-      <p>Chaque réalisation sera présentée avec son contexte, le travail effectué, les tests, le résultat et les preuves associées.</p>
+      <p>Chaque réalisation est présentée avec son contexte, le travail effectué, les difficultés, les tests et les compétences mobilisées.</p>
     </div>
     <div class="cards three">
-      <article class="card"><span class="number">01</span><h3>Réaliser</h3><p>Présenter les TP, projets et activités réalisés pendant la formation.</p></article>
-      <article class="card"><span class="number">02</span><h3>Documenter</h3><p>Conserver les captures, schémas, procédures et autres preuves utiles.</p></article>
-      <article class="card"><span class="number">03</span><h3>Expliquer</h3><p>Être capable de présenter mes choix, mes difficultés et mes résultats.</p></article>
+      <article class="card"><span class="number">01</span><h3>Réaliser</h3><p>Des projets concrets en formation et en entreprise : virtualisation, réseau, poste de travail.</p></article>
+      <article class="card"><span class="number">02</span><h3>Documenter</h3><p>Procédures, captures, schémas et tableaux de tests pour chaque réalisation.</p></article>
+      <article class="card"><span class="number">03</span><h3>Expliquer</h3><p>Présenter mes choix techniques, les problèmes rencontrés et la manière dont je les ai résolus.</p></article>
     </div>
   </section>
 
   <section class="section dark-section">
     <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Navigation</p>
-        <h2>Ce que vous trouverez ici</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Réalisations à la une</p><h2>Mes derniers projets</h2></div>
       <div class="cards three">
-        <a class="card link-card" href="#" onclick="showPage('a-propos');return false"><h3>À propos →</h3><p>Mon parcours, ma formation et mon CV.</p></a>
-        <a class="card link-card" href="#" onclick="showPage('realisations');return false"><h3>Réalisations →</h3><p>Mes projets et TP documentés avec leurs preuves.</p></a>
-        <a class="card link-card" href="#" onclick="showPage('competences');return false"><h3>Compétences →</h3><p>Correspondance entre mes réalisations et le Bloc 1.</p></a>
+        <a class="card link-card" onclick="showPage('tp-proxmox')"><span class="tag cours">FORMATION</span><h3>Proxmox VE & VMs →</h3><p>Hyperviseur, Windows Server 2022, Debian 12, poste client et snapshots.</p></a>
+        <a class="card link-card" onclick="showPage('tp-vlan')"><span class="tag cours">FORMATION</span><h3>Réseau 3 sites & VLAN →</h3><p>VLAN, trunks, routage inter-VLAN, DHCP, ACL et SSH sous Packet Tracer.</p></a>
+        <a class="card link-card" onclick="showPage('stage')"><span class="tag ent">ENTREPRISE</span><h3>Stage réparation →</h3><p>Diagnostic, réparation, installation de systèmes et logiciels sur les postes clients.</p></a>
       </div>
     </div>
   </section>
 </section>
+
+<!-- ================= A PROPOS ================= -->
 <section id="apropos" class="page">
 <section class="page-header container"><p class="eyebrow">01 · À PROPOS</p><h1>Mon parcours</h1><p>Une présentation synthétique de mon parcours et de ma formation.</p></section>
 <section class="section container two-col">
   <div><p class="eyebrow">Présentation</p><h2>Jason Tassoua-Liboukou</h2>
-  <p>Je suis étudiant en deuxième année de <strong>BTS SIO</strong>, option <strong>SISR</strong>. Ce portfolio présente les compétences et les réalisations que je construis pendant ma formation.</p>
-  <p>Mon objectif est de progresser dans le domaine informatique, notamment autour des systèmes, des réseaux et de la cybersécurité.</p></div>
-  <div class="info-box"><h3>Formation</h3><p><strong>BTS SIO — SISR</strong></p><p>2ème année · 2026–2027</p><p>CFA ITIS · Évry</p></div>
+  <p>Je suis étudiant en deuxième année de <strong>BTS SIO</strong>, option <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), au CFA ITIS.</p>
+  <p>En formation, je travaille sur des infrastructures concrètes : virtualisation avec Proxmox, serveurs Windows et Linux, segmentation réseau avec des VLAN et sécurisation des accès.</p>
+  <p>En entreprise, j'ai effectué mon stage dans un service de réparation informatique, où j'ai pris en charge le diagnostic et la remise en état de postes ainsi que l'installation de systèmes et de logiciels.</p>
+  <p>Mon objectif est de progresser dans les systèmes, les réseaux et la cybersécurité.</p></div>
+  <div class="info-box"><h3>Formation</h3><p><strong>BTS SIO — SISR</strong></p><p>2ème année · 2026–2027</p><p>CFA ITIS · Évry</p><h3 style="margin-top:18px">Domaines</h3><p>Virtualisation · Réseaux</p><p>Windows Server · Linux</p><p>Support utilisateur</p></div>
 </section>
 <section class="section alt"><div class="container"><div class="section-heading"><p class="eyebrow">Parcours</p><h2>Formation & expériences</h2></div>
 <div class="timeline">
   <div class="timeline-item"><span>Formation</span><h3>BTS SIO — SISR</h3><p>Deuxième année · CFA ITIS · 2026–2027</p></div>
+  <div class="timeline-item"><span>Stage</span><h3>Technicien en service de réparation informatique</h3><p>Diagnostic de pannes, réparation, installation et configuration de systèmes et de logiciels.</p></div>
   <div class="timeline-item"><span>Diplôme</span><h3>Bac Pro Systèmes Numériques</h3><p>Formation orientée systèmes numériques et informatique.</p></div>
-  <div class="timeline-item"><span>Expériences</span><h3>Expériences professionnelles</h3><p>Expériences dans différents environnements professionnels, notamment en assistance, accueil, logistique et support technique.</p></div>
+  <div class="timeline-item"><span>Expériences</span><h3>Expériences professionnelles</h3><p>Assistance, accueil, logistique et support technique.</p></div>
 </div></div></section>
 <section class="section container cv-section">
   <div class="cv-card">
-    <div>
-      <p class="eyebrow">CV</p>
-      <h2>Mon CV</h2>
-      <p>Retrouvez mon parcours, mes compétences, mes projets et mes expériences professionnelles dans mon CV.</p>
-      <p class="cv-note">CV mis à disposition directement depuis le portfolio.</p>
-    </div>
+    <div><p class="eyebrow">CV</p><h2>Mon CV</h2><p>Retrouvez mon parcours, mes compétences, mes projets et mes expériences professionnelles dans mon CV.</p><p class="cv-note">CV mis à disposition directement depuis le portfolio.</p></div>
     <div class="cv-actions">
       <a class="btn primary" href="CV_Jason_Tassoua_Liboukou.pdf" target="_blank" rel="noopener">Ouvrir mon CV</a>
       <a class="btn secondary" href="CV_Jason_Tassoua_Liboukou.pdf" download>Télécharger le PDF</a>
@@ -184,45 +107,100 @@ footer{border-top:1px solid var(--line);padding:25px 0}.footer-content{display:f
   </div>
 </section>
 </section>
+
+<!-- ================= REALISATIONS ================= -->
 <section id="realisations" class="page">
-<section class="page-header container"><p class="eyebrow">02 · RÉALISATIONS</p><h1>Mes réalisations</h1><p>Cette rubrique sera enrichie après chaque TP ou activité pertinente.</p></section>
+<section class="page-header container"><p class="eyebrow">02 · RÉALISATIONS</p><h1>Mes réalisations</h1><p>Projets réalisés en formation et en entreprise, documentés pour l'épreuve E5.</p></section>
 <section class="section container">
-<div class="notice"><strong>Réflexe E5 :</strong> à chaque TP, conserver les preuves utiles : captures importantes, schémas, procédures, tests et résultats.</div>
+<div class="filters">
+  <button class="on" onclick="filterCards('all',this)">Toutes</button>
+  <button onclick="filterCards('cours',this)">En formation</button>
+  <button onclick="filterCards('ent',this)">En entreprise</button>
+</div>
 <div class="realisation-grid">
-  <article class="project-card placeholder"><div class="tag">À COMPLÉTER</div><h2>TP / Projet 01</h2><p>Ajoute ici ton premier TP. Utilise la fiche détaillée ci-dessous comme structure.</p><a href="#" onclick="showPage('modele');return false">Voir le modèle →</a></article>
-  <article class="project-card placeholder"><div class="tag">À COMPLÉTER</div><h2>TP / Projet 02</h2><p>Une nouvelle réalisation pourra être ajoutée ici.</p><a href="#" onclick="showPage('modele');return false">Voir le modèle →</a></article>
-  <article class="project-card placeholder"><div class="tag">À COMPLÉTER</div><h2>TP / Projet 03</h2><p>Ajoute progressivement les projets réalisés pendant l'année.</p><a href="#" onclick="showPage('modele');return false">Voir le modèle →</a></article>
+  <article class="project-card" data-type="cours"><span class="tag cours">FORMATION · TP1</span><h2>Infrastructure virtualisée sous Proxmox VE</h2><p>Mise en place de l'hyperviseur Medilog, création de SRV-DC01 (Windows Server 2022), SRV-FS01 (Debian 12) et d'un poste client, snapshots et tests réseau.</p><div class="chips"><span>Proxmox</span><span>Windows Server</span><span>Debian</span><span>Snapshots</span></div><a href="#" onclick="showPage('tp-proxmox');return false">Voir la fiche →</a></article>
+  <article class="project-card" data-type="cours"><span class="tag cours">FORMATION · RÉSEAU</span><h2>Réseau multisite Medilog avec VLAN</h2><p>Maquette Packet Tracer de 3 sites : VLAN, trunks 802.1Q, routage inter-VLAN, liaisons WAN, DHCP, DNS, ACL et administration SSH.</p><div class="chips"><span>Cisco</span><span>VLAN</span><span>DHCP</span><span>ACL</span><span>SSH</span></div><a href="#" onclick="showPage('tp-vlan');return false">Voir la fiche →</a></article>
+  <article class="project-card" data-type="ent"><span class="tag ent">ENTREPRISE · STAGE</span><h2>Support et réparation de postes informatiques</h2><p>Accueil client, diagnostic matériel et logiciel, réparation, installation de systèmes d'exploitation et de logiciels, restitution du poste.</p><div class="chips"><span>Diagnostic</span><span>Windows</span><span>Logiciels</span><span>Support</span></div><a href="#" onclick="showPage('stage');return false">Voir la fiche →</a></article>
 </div>
 </section>
 </section>
-<section id="modele" class="page">
-<section class="page-header container"><p class="eyebrow">FICHE E5</p><h1>Nom de la réalisation</h1><p>Remplace ce contenu par les informations de ton TP.</p></section>
+
+<!-- ================= FICHE TP PROXMOX ================= -->
+<section id="tp-proxmox" class="page">
+<section class="page-header container"><button class="back" onclick="showPage('realisations')">← Retour aux réalisations</button><p class="eyebrow">FICHE E5 · FORMATION</p><h1>Infrastructure virtualisée sous Proxmox VE</h1><p>Projet Medilog Services · TP1 · Situation professionnelle SP1</p></section>
 <section class="section container detail">
-  <article><span class="step">01</span><h2>Titre & contexte</h2><p><strong>Organisation :</strong> À compléter</p><p><strong>Situation :</strong> Où ? Pour qui ? Dans quel environnement ?</p></article>
-  <article><span class="step">02</span><h2>Besoin & objectifs</h2><p>Quel problème fallait-il résoudre ? Quel résultat était attendu ?</p></article>
-  <article><span class="step">03</span><h2>Environnement</h2><p>Matériels, systèmes d'exploitation, logiciels, services, technologies et réseau utilisés.</p></article>
-  <article><span class="step">04</span><h2>Travail réalisé</h2><p>Décris les étapes que tu as personnellement réalisées et les choix effectués.</p></article>
-  <article><span class="step">05</span><h2>Contribution personnelle</h2><p>Si le travail était en groupe, indique précisément ce que TU as fait.</p></article>
-  <article><span class="step">06</span><h2>Difficultés</h2><p>Indique les problèmes rencontrés, le diagnostic effectué et les solutions apportées.</p></article>
-  <article><span class="step">07</span><h2>Tests & résultat</h2><p>Explique comment tu as vérifié le fonctionnement et présente le résultat obtenu.</p></article>
-  <article><span class="step">08</span><h2>Compétences & preuves</h2><p>Associe la réalisation aux compétences du Bloc 1 et ajoute les captures, schémas, tickets ou procédures utiles.</p></article>
+  <article><span class="step">01</span><h2>Contexte</h2><p><strong>Organisation :</strong> Medilog Services, PME de 65 salariés (cas d'entreprise fictif du CFA ITIS).</p><p><strong>Demandeur :</strong> le DSI de Medilog.</p><p><strong>Situation :</strong> l'entreprise n'a pas d'infrastructure serveur. Il faut poser la fondation sur laquelle reposera tout le reste du projet.</p></article>
+  <article><span class="step">02</span><h2>Besoin & objectifs</h2><ul><li>Installer un hyperviseur Proxmox VE sur un serveur physique.</li><li>Créer un futur contrôleur de domaine sous Windows Server 2022.</li><li>Créer un serveur de fichiers sous Debian 12.</li><li>Ajouter un poste client et vérifier la communication entre toutes les machines.</li><li>Prendre un snapshot de sécurité avant l'installation d'Active Directory.</li></ul></article>
+  <article><span class="step">03</span><h2>Environnement</h2><ul><li><strong>Hyperviseur :</strong> Proxmox VE 8, interface web sur le port 8006.</li><li><strong>SRV-DC01 :</strong> Windows Server 2022, 4 Go de RAM, 2 cœurs, 60 Go.</li><li><strong>SRV-FS01 :</strong> Debian 12 sans interface graphique, SSH, 2 Go de RAM.</li><li><strong>Poste client :</strong> Windows 11.</li><li><strong>Réseau :</strong> 192.168.1.0/24, bridge vmbr0, passerelle 192.168.1.1.</li></ul></article>
+  <article><span class="step">04</span><h2>Travail réalisé</h2><ul><li>Création de la clé USB bootable avec Rufus et installation bare-metal de Proxmox.</li><li>Upload des ISO Windows Server et Debian dans le stockage local.</li><li>Création des VM : machine q35, BIOS UEFI, disques SCSI au format qcow2, cartes réseau VirtIO.</li><li>Installation des systèmes et configuration des adresses IP fixes.</li><li>Snapshot « base-propre-avant-AD » sur SRV-DC01.</li></ul></article>
+  <article class="wide"><span class="step">05</span><h2>Plan d'adressage</h2><div class="table-wrap"><table><thead><tr><th>Machine</th><th>Système</th><th>Adresse IP</th><th>Rôle</th></tr></thead><tbody>
+    <tr><td>pve</td><td>Proxmox VE 8</td><td>192.168.1.13</td><td>Hyperviseur</td></tr>
+    <tr><td>SRV-DC01</td><td>Windows Server 2022</td><td>192.168.1.190</td><td>Futur contrôleur de domaine et DNS</td></tr>
+    <tr><td>SRV-FS01</td><td>Debian 12</td><td>192.168.1.191</td><td>Serveur de fichiers</td></tr>
+    <tr><td>PC-Client</td><td>Windows 11</td><td>192.168.1.198</td><td>Poste utilisateur</td></tr>
+  </tbody></table></div></article>
+  <article><span class="step">06</span><h2>Difficultés & solutions</h2><ul><li><strong>Disque invisible à l'installation de Windows :</strong> le contrôleur SCSI VirtIO demande un pilote. J'ai monté l'ISO virtio-win et chargé le pilote vioscsi pendant l'installation.</li><li><strong>Copier-coller impossible dans la console noVNC :</strong> le clavier AZERTY transformait les chiffres en symboles. J'ai utilisé l'interface graphique et le clavier visuel de Windows.</li><li><strong>Ping bloqué vers Windows :</strong> le pare-feu bloque l'ICMP par défaut. J'ai ajouté une règle autorisant le ping entrant.</li></ul></article>
+  <article><span class="step">07</span><h2>Tests & résultat</h2><div class="table-wrap"><table style="min-width:0"><thead><tr><th>Test</th><th>Résultat</th></tr></thead><tbody>
+    <tr><td>Interface web Proxmox accessible</td><td class="ok">OK</td></tr>
+    <tr><td>ipconfig sur SRV-DC01 : 192.168.1.190</td><td class="ok">OK</td></tr>
+    <tr><td>Ping de SRV-DC01 vers SRV-FS01</td><td class="ok">0 % de perte</td></tr>
+    <tr><td>Ping du poste client vers SRV-DC01</td><td class="ok">0 % de perte</td></tr>
+    <tr><td>Snapshot base-propre-avant-AD visible</td><td class="ok">OK</td></tr>
+  </tbody></table></div></article>
+  <article class="wide"><span class="step">08</span><h2>Pourquoi un snapshot avant Active Directory ?</h2><p>La promotion en contrôleur de domaine modifie le serveur en profondeur : rôles, DNS, schéma et comptes. Une erreur, comme un mauvais nom de domaine ou une mauvaise IP, est difficile à annuler proprement. Le snapshot permet de revenir en quelques secondes à un Windows sain et déjà configuré, sans tout réinstaller.</p><p><strong>Compétences mobilisées :</strong> C1 Gérer le patrimoine informatique · C5 Mettre à disposition un service · C4 Travailler en mode projet.</p><p class="todo-note">À ajouter : les captures de l'interface Proxmox, des VM, des pings et du snapshot.</p></article>
 </section>
 </section>
+
+<!-- ================= FICHE TP VLAN ================= -->
+<section id="tp-vlan" class="page">
+<section class="page-header container"><button class="back" onclick="showPage('realisations')">← Retour aux réalisations</button><p class="eyebrow">FICHE E5 · FORMATION</p><h1>Réseau multisite Medilog avec VLAN</h1><p>Maquette Cisco Packet Tracer · 3 sites : Melun, Montereau et Fontainebleau</p></section>
+<section class="section container detail">
+  <article><span class="step">01</span><h2>Contexte</h2><p><strong>Organisation :</strong> Medilog Services, avec un siège à Melun et deux antennes.</p><p><strong>Situation :</strong> le réseau n'est pas segmenté et les sites ne sont pas interconnectés de façon structurée.</p></article>
+  <article><span class="step">02</span><h2>Besoin & objectifs</h2><ul><li>Segmenter chaque site en VLAN : administration, utilisateurs, serveurs et DMZ.</li><li>Interconnecter les 3 sites, avec Melun comme site central.</li><li>Distribuer les adresses IP par DHCP.</li><li>Empêcher les utilisateurs d'accéder au VLAN d'administration.</li><li>Administrer les routeurs à distance de façon sécurisée.</li></ul></article>
+  <article><span class="step">03</span><h2>Environnement</h2><ul><li>3 routeurs Cisco 2911 et 3 switchs Cisco 2960.</li><li>7 postes et 1 serveur Web et DNS, SRV-MEL.</li><li>Réseaux LAN en 192.168.x.0/24 et 10.x.x.0/24, WAN en /30.</li></ul></article>
+  <article><span class="step">04</span><h2>Travail réalisé</h2><ul><li>Création des VLAN, des ports access et des trunks 802.1Q.</li><li>Routage inter-VLAN en « router-on-a-stick » avec des sous-interfaces.</li><li>Liaisons WAN et routes statiques, avec une route par défaut vers Melun.</li><li>Pools DHCP par VLAN, avec la passerelle et le DNS.</li><li>Serveur HTTP et DNS pour l'intranet intranet.medilog.local.</li><li>ACL étendues pour isoler le VLAN ADMIN.</li><li>SSH v2 avec un compte local et Telnet désactivé.</li></ul></article>
+  <article><span class="step">05</span><h2>Difficultés & solutions</h2><ul><li><strong>Les postes ne recevaient plus d'IP après l'ACL :</strong> le refus implicite en fin d'ACL bloquait les requêtes DHCP. J'ai ajouté une ligne qui autorise bootpc vers bootps en tête d'ACL.</li><li><strong>Ping de ADMIN vers les utilisateurs refusé :</strong> l'ACL bloquait la réponse ICMP. J'ai autorisé les echo-reply vers ADMIN pour respecter la règle R3.</li></ul></article>
+  <article><span class="step">06</span><h2>Tests & résultat</h2><ul><li>Toutes les passerelles répondent au ping.</li><li>Les utilisateurs des antennes joignent SRV-MEL et l'intranet.</li><li>Le ping des utilisateurs vers le VLAN ADMIN échoue, comme attendu.</li><li>Les postes reçoivent la bonne configuration par DHCP.</li><li>La connexion SSH aux routeurs distants fonctionne et Telnet est refusé.</li></ul><p><strong>Compétences :</strong> C2 · C5 · C4.</p></article>
+</section>
+</section>
+
+<!-- ================= FICHE STAGE ================= -->
+<section id="stage" class="page">
+<section class="page-header container"><button class="back" onclick="showPage('realisations')">← Retour aux réalisations</button><p class="eyebrow">FICHE E5 · ENTREPRISE</p><h1>Support et réparation de postes informatiques</h1><p>Stage en service de réparation informatique</p></section>
+<section class="section container detail">
+  <article><span class="step">01</span><h2>Contexte</h2><p><strong>Entreprise :</strong> <span class="todo-note">[nom de l'entreprise]</span></p><p><strong>Service :</strong> réparation et maintenance informatique.</p><p><strong>Période :</strong> <span class="todo-note">[dates du stage]</span></p><p><strong>Situation :</strong> des particuliers et des professionnels déposent des ordinateurs en panne, lents ou à réinstaller.</p></article>
+  <article><span class="step">02</span><h2>Besoin & objectifs</h2><ul><li>Diagnostiquer la panne, qu'elle soit matérielle ou logicielle.</li><li>Réparer ou remettre en état le poste.</li><li>Installer et configurer le système d'exploitation et les logiciels demandés.</li><li>Rendre au client un poste fonctionnel, à jour et sécurisé.</li></ul></article>
+  <article><span class="step">03</span><h2>Environnement</h2><ul><li>Postes fixes et ordinateurs portables de clients.</li><li>Windows 10 et Windows 11.</li><li>Clés USB d'installation, outils de diagnostic et logiciels bureautiques et de sécurité.</li><li><span class="todo-note">[ajoute les outils précis utilisés : logiciel de tickets, outil de sauvegarde, antivirus…]</span></li></ul></article>
+  <article><span class="step">04</span><h2>Travail réalisé</h2><ul><li>Prise en charge du poste et recueil du besoin auprès du client.</li><li>Diagnostic : tests du matériel, analyse des lenteurs et des erreurs.</li><li>Sauvegarde des données du client avant toute intervention.</li><li>Installation ou réinstallation de Windows, des pilotes et des mises à jour.</li><li>Installation et configuration des logiciels : bureautique, navigateur, antivirus…</li><li>Tests finaux et restitution du poste au client.</li></ul></article>
+  <article><span class="step">05</span><h2>Difficultés & solutions</h2><p class="todo-note">Décris ici une ou deux interventions réelles, par exemple : « Un PC portable ne démarrait plus. J'ai testé la RAM et le disque, trouvé un disque défaillant, sauvegardé les données, remplacé le disque et réinstallé Windows. »</p></article>
+  <article><span class="step">06</span><h2>Tests & résultat</h2><ul><li>Le poste démarre correctement et le système est activé et à jour.</li><li>Les logiciels demandés sont installés et fonctionnent.</li><li>Les données du client sont restaurées.</li><li>Le client valide le poste à la restitution.</li></ul><p><strong>Compétences :</strong> C1 Gérer le patrimoine · C2 Répondre aux incidents · C5 Mettre à disposition un service.</p></article>
+</section>
+</section>
+
+<!-- ================= COMPETENCES ================= -->
 <section id="competences" class="page">
-<section class="page-header container"><p class="eyebrow">03 · COMPÉTENCES</p><h1>Bloc 1</h1><p>Les réalisations seront progressivement reliées aux compétences mobilisées.</p></section>
+<section class="page-header container"><p class="eyebrow">03 · COMPÉTENCES</p><h1>Bloc 1</h1><p>Correspondance entre mes réalisations et les compétences du référentiel.</p></section>
 <section class="section container">
 <div class="skills-grid">
-<article class="skill"><span>01</span><h2>Gérer le patrimoine informatique</h2><p>Inventaire, comptes, équipements, licences et documentation.</p><div class="skill-proof">Réalisations liées : à compléter</div></article>
-<article class="skill"><span>02</span><h2>Répondre aux incidents</h2><p>Tickets, diagnostic, assistance, résolution et traçabilité.</p><div class="skill-proof">Réalisations liées : à compléter</div></article>
-<article class="skill"><span>03</span><h2>Développer la présence en ligne</h2><p>Site web, CMS, contenu, services et visibilité en ligne.</p><div class="skill-proof">Réalisations liées : portfolio</div></article>
-<article class="skill"><span>04</span><h2>Travailler en mode projet</h2><p>Objectifs, planning, répartition, suivi et bilan.</p><div class="skill-proof">Réalisations liées : à compléter</div></article>
-<article class="skill"><span>05</span><h2>Mettre à disposition un service</h2><p>Installer, configurer, tester, documenter et accompagner.</p><div class="skill-proof">Réalisations liées : à compléter</div></article>
-<article class="skill"><span>06</span><h2>Développement professionnel</h2><p>Veille, portfolio, certifications, CV et projet professionnel.</p><div class="skill-proof">Réalisations liées : portfolio + veille</div></article>
+<article class="skill"><span>01</span><h2>Gérer le patrimoine informatique</h2><p>Inventaire, comptes, équipements, licences et documentation.</p><div class="skill-proof">Réalisations liées : TP Proxmox (plan d'adressage, VM documentées) · Stage (prise en charge des postes clients)</div></article>
+<article class="skill"><span>02</span><h2>Répondre aux incidents</h2><p>Tickets, diagnostic, assistance, résolution et traçabilité.</p><div class="skill-proof">Réalisations liées : Stage (diagnostic et réparation) · TP VLAN (dépannage DHCP et ACL)</div></article>
+<article class="skill"><span>03</span><h2>Développer la présence en ligne</h2><p>Site web, CMS, contenu, services et visibilité en ligne.</p><div class="skill-proof">Réalisations liées : Portfolio · TP VLAN (intranet HTTP et DNS)</div></article>
+<article class="skill"><span>04</span><h2>Travailler en mode projet</h2><p>Objectifs, planning, répartition, suivi et bilan.</p><div class="skill-proof">Réalisations liées : Projet Medilog (TP en binôme, étapes validées une par une)</div></article>
+<article class="skill"><span>05</span><h2>Mettre à disposition un service</h2><p>Installer, configurer, tester, documenter et accompagner.</p><div class="skill-proof">Réalisations liées : TP Proxmox (serveurs) · TP VLAN (DHCP, DNS, SSH) · Stage (installation de logiciels)</div></article>
+<article class="skill"><span>06</span><h2>Développement professionnel</h2><p>Veille, portfolio, certifications, CV et projet professionnel.</p><div class="skill-proof">Réalisations liées : Portfolio · Veille technologique</div></article>
 </div>
 </section>
-<section class="section alt"><div class="container"><div class="section-heading"><p class="eyebrow">Tableau de suivi</p><h2>Réalisations ↔ compétences</h2><p>Complète ce tableau au fur et à mesure de l'année.</p></div>
-<div class="table-wrap"><table><thead><tr><th>Réalisation</th><th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>C5</th><th>C6</th></tr></thead><tbody><tr><td>Portfolio</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>—</td><td>✓</td></tr><tr><td>TP / Projet 01</td><td>À remplir</td><td>À remplir</td><td>À remplir</td><td>À remplir</td><td>À remplir</td><td>À remplir</td></tr></tbody></table></div></div></section>
+<section class="section alt"><div class="container"><div class="section-heading"><p class="eyebrow">Tableau de suivi</p><h2>Réalisations ↔ compétences</h2></div>
+<div class="table-wrap"><table><thead><tr><th>Réalisation</th><th>Type</th><th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>C5</th><th>C6</th></tr></thead><tbody>
+<tr><td>Infrastructure Proxmox VE</td><td>Formation</td><td class="ok">✓</td><td>—</td><td>—</td><td class="ok">✓</td><td class="ok">✓</td><td>—</td></tr>
+<tr><td>Réseau multisite VLAN</td><td>Formation</td><td>—</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td>—</td></tr>
+<tr><td>Stage réparation informatique</td><td>Entreprise</td><td class="ok">✓</td><td class="ok">✓</td><td>—</td><td>—</td><td class="ok">✓</td><td>—</td></tr>
+<tr><td>Portfolio</td><td>Personnel</td><td>—</td><td>—</td><td class="ok">✓</td><td class="ok">✓</td><td>—</td><td class="ok">✓</td></tr>
+<tr><td>Veille technologique</td><td>Personnel</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="ok">✓</td></tr>
+</tbody></table></div></div></section>
 </section>
+
+<!-- ================= VEILLE (inchangée) ================= -->
 <section id="veille" class="page">
 <section class="page-header container">
   <p class="eyebrow">04 · VEILLE TECHNOLOGIQUE</p>
@@ -230,157 +208,62 @@ footer{border-top:1px solid var(--line);padding:25px 0}.footer-content{display:f
   <p>Suivi de l'évolution de l'intelligence artificielle et de son impact sur la création et l'expérience des jeux vidéo.</p>
   <span class="veille-update">Dernière mise à jour : 14 octobre 2026</span>
 </section>
-
 <section class="section container two-col">
   <div>
     <p class="eyebrow">Mon sujet de veille</p>
     <h2>L'évolution de l'intelligence artificielle dans les jeux vidéo</h2>
-
-    <div class="veille-topic">
-      <span class="label">Problématique</span>
-      <strong>Comment l'intelligence artificielle transforme-t-elle la création et l'expérience des jeux vidéo ?</strong>
-    </div>
-
+    <div class="veille-topic"><span class="label">Problématique</span><strong>Comment l'intelligence artificielle transforme-t-elle la création et l'expérience des jeux vidéo ?</strong></div>
     <div class="veille-list">
       <p><b>Objectif :</b> suivre les nouvelles technologies d'IA utilisées dans le développement, les tests, la génération de contenu et l'expérience des joueurs.</p>
       <p><b>Début de la veille :</b> 22 septembre 2026</p>
       <p><b>Pourquoi ce sujet ?</b> L'IA prend une place de plus en plus importante dans les outils de création de jeux. Cette veille permet d'observer concrètement comment les méthodes de développement évoluent.</p>
     </div>
   </div>
-
   <aside class="info-box">
     <h3>Méthode de veille</h3>
     <p><strong>Sources suivies :</strong></p>
-    <p>• Newsrooms et blogs officiels des studios</p>
-    <p>• Sites des moteurs de jeu</p>
-    <p>• Articles de presse spécialisée</p>
-    <p>• Conférences et annonces techniques</p>
+    <p>• Newsrooms et blogs officiels des studios</p><p>• Sites des moteurs de jeu</p><p>• Articles de presse spécialisée</p><p>• Conférences et annonces techniques</p>
     <p style="margin-top:14px"><strong>Pour chaque information :</strong></p>
     <p>date → source → résumé → technologies → impact → évolution du sujet</p>
   </aside>
 </section>
-
-<section class="section alt">
-  <div class="container">
-    <div class="section-heading veille-section-title">
-      <p class="eyebrow">Actualités suivies</p>
-      <h2>Mes fiches de veille</h2>
-      <p>Chaque fiche présente une information vérifiée et explique ce qu'elle apporte à l'évolution de mon sujet.</p>
+<section class="section alt"><div class="container">
+  <div class="section-heading veille-section-title"><p class="eyebrow">Actualités suivies</p><h2>Mes fiches de veille</h2><p>Chaque fiche présente une information vérifiée et explique ce qu'elle apporte à l'évolution de mon sujet.</p></div>
+  <article class="veille-fiche">
+    <header class="veille-fiche-head"><span class="fiche-number">Fiche n°1</span><h2>Roblox fait évoluer l'IA vers un véritable assistant de développement</h2><div class="veille-meta"><span>15 avril 2026</span><span>Roblox Newsroom</span><span>IA générative & agents IA</span></div></header>
+    <div class="veille-fiche-body">
+      <div class="veille-block"><h3>Résumé de l'information</h3>
+        <p>Roblox a présenté de nouvelles fonctions d'intelligence artificielle intégrées à Roblox Studio et à Roblox Assistant. L'objectif est d'utiliser des agents IA capables d'accompagner les créateurs à plusieurs étapes du développement d'un jeu.</p>
+        <p>L'IA peut participer à une boucle de travail organisée autour de trois grandes étapes : <strong>planifier, construire et tester</strong>. Le mode de planification peut analyser le code et le modèle de données d'un projet afin de produire un plan d'action détaillé et modifiable avant d'effectuer des changements.</p>
+        <p>Roblox ajoute également des outils de génération de modèles et de contenu procédural ainsi qu'un agent de playtest capable d'analyser le jeu, de lire les journaux et de vérifier automatiquement certains comportements.</p>
+        <p>Roblox indique que <strong>44 % des 1 000 créateurs les plus importants de la plateforme</strong> utilisaient déjà Roblox Assistant ou des outils d'IA tiers via MCP pour planifier, construire ou tester leurs jeux pendant la période étudiée.</p></div>
+      <div class="veille-block"><h3>Technologies concernées</h3><div class="veille-tags"><span class="veille-tag">IA générative</span><span class="veille-tag">Agents IA</span><span class="veille-tag">Génération procédurale</span><span class="veille-tag">Génération 3D</span><span class="veille-tag">Tests automatisés</span><span class="veille-tag">Analyse du code et des données</span></div></div>
+      <div class="veille-block"><h3>Impact sur le gaming</h3>
+        <p>Cette évolution peut accélérer certaines tâches de développement et réduire le temps consacré aux opérations répétitives. L'IA n'est plus seulement utilisée pour générer du contenu : elle peut désormais intervenir dans la préparation d'un projet, sa construction et sa phase de test.</p>
+        <p>Pour les développeurs indépendants et les petites équipes, ces outils peuvent faciliter le prototypage et rendre certaines étapes techniques plus accessibles. Le développeur reste cependant indispensable pour définir l'idée, contrôler les résultats et prendre les décisions artistiques et techniques.</p></div>
+      <div class="veille-block"><h3>Évolution de mon sujet</h3><div class="veille-conclusion"><p>Cette actualité montre le passage d'une IA utilisée comme simple outil d'assistance à une IA capable d'enchaîner plusieurs tâches dans le cycle de développement. La tendance dépasse Roblox : Unity présente également Unity 7 comme une plateforme conçue pour permettre aux créateurs et aux agents de programmation de collaborer tout au long du cycle de développement.</p></div></div>
+      <div class="veille-block"><h3>Sources</h3><p><strong>Source principale :</strong> Roblox, « Roblox Studio is Going Agentic », 15 avril 2026.</p><a class="veille-source-link" href="https://about.roblox.com/fr/newsroom/2026/04/roblox-studio-going-agentic" target="_blank" rel="noopener">Consulter la publication Roblox →</a><br><a class="veille-source-link" href="https://unity.com/releases/unity-7" target="_blank" rel="noopener">Consulter la page Unity 7 →</a></div>
     </div>
-
-    <article class="veille-fiche">
-      <header class="veille-fiche-head">
-        <span class="fiche-number">Fiche n°1</span>
-        <h2>Roblox fait évoluer l'IA vers un véritable assistant de développement</h2>
-        <div class="veille-meta">
-          <span>15 avril 2026</span>
-          <span>Roblox Newsroom</span>
-          <span>IA générative & agents IA</span>
-        </div>
-      </header>
-
-      <div class="veille-fiche-body">
-        <div class="veille-block">
-          <h3>Résumé de l'information</h3>
-          <p>Roblox a présenté de nouvelles fonctions d'intelligence artificielle intégrées à Roblox Studio et à Roblox Assistant. L'objectif est d'utiliser des agents IA capables d'accompagner les créateurs à plusieurs étapes du développement d'un jeu.</p>
-          <p>L'IA peut participer à une boucle de travail organisée autour de trois grandes étapes : <strong>planifier, construire et tester</strong>. Le mode de planification peut analyser le code et le modèle de données d'un projet afin de produire un plan d'action détaillé et modifiable avant d'effectuer des changements.</p>
-          <p>Roblox ajoute également des outils de génération de modèles et de contenu procédural ainsi qu'un agent de playtest capable d'analyser le jeu, de lire les journaux et de vérifier automatiquement certains comportements.</p>
-          <p>Roblox indique que <strong>44 % des 1 000 créateurs les plus importants de la plateforme</strong> utilisaient déjà Roblox Assistant ou des outils d'IA tiers via MCP pour planifier, construire ou tester leurs jeux pendant la période étudiée.</p>
-        </div>
-
-        <div class="veille-block">
-          <h3>Technologies concernées</h3>
-          <div class="veille-tags">
-            <span class="veille-tag">IA générative</span>
-            <span class="veille-tag">Agents IA</span>
-            <span class="veille-tag">Génération procédurale</span>
-            <span class="veille-tag">Génération 3D</span>
-            <span class="veille-tag">Tests automatisés</span>
-            <span class="veille-tag">Analyse du code et des données</span>
-          </div>
-        </div>
-
-        <div class="veille-block">
-          <h3>Impact sur le gaming</h3>
-          <p>Cette évolution peut accélérer certaines tâches de développement et réduire le temps consacré aux opérations répétitives. L'IA n'est plus seulement utilisée pour générer du contenu : elle peut désormais intervenir dans la préparation d'un projet, sa construction et sa phase de test.</p>
-          <p>Pour les développeurs indépendants et les petites équipes, ces outils peuvent faciliter le prototypage et rendre certaines étapes techniques plus accessibles. Le développeur reste cependant indispensable pour définir l'idée, contrôler les résultats et prendre les décisions artistiques et techniques.</p>
-        </div>
-
-        <div class="veille-block">
-          <h3>Évolution de mon sujet</h3>
-          <div class="veille-conclusion">
-            <p>Cette actualité montre le passage d'une IA utilisée comme simple outil d'assistance à une IA capable d'enchaîner plusieurs tâches dans le cycle de développement. La tendance dépasse Roblox : Unity présente également Unity 7 comme une plateforme conçue pour permettre aux créateurs et aux agents de programmation de collaborer tout au long du cycle de développement.</p>
-          </div>
-        </div>
-
-        <div class="veille-block">
-          <h3>Sources</h3>
-          <p><strong>Source principale :</strong> Roblox, « Roblox Studio is Going Agentic », 15 avril 2026.</p>
-          <a class="veille-source-link" href="https://about.roblox.com/fr/newsroom/2026/04/roblox-studio-going-agentic" target="_blank" rel="noopener">Consulter la publication Roblox →</a>
-          <br>
-          <a class="veille-source-link" href="https://unity.com/releases/unity-7" target="_blank" rel="noopener">Consulter la page Unity 7 →</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="veille-fiche">
-      <header class="veille-fiche-head">
-        <span class="fiche-number">Fiche n°2</span>
-        <h2>Google et Unity veulent rendre la création de jeux par IA accessible à un public beaucoup plus large</h2>
-        <div class="veille-meta">
-          <span>7 octobre 2026</span>
-          <span>Unity</span>
-          <span>Google AI & création de jeux</span>
-        </div>
-      </header>
-
-      <div class="veille-fiche-body">
-        <div class="veille-block">
-          <h3>Résumé de l'information</h3>
-          <p>Le 7 octobre 2026, Google et Unity ont annoncé un partenariat stratégique autour d'une nouvelle plateforme de création de jeux intégrant l'intelligence artificielle. L'objectif annoncé est de réunir les technologies d'IA de Google avec l'expérience de Unity dans les moteurs et outils de création de jeux.</p>
-          <p>Unity présente cette initiative comme une nouvelle manière de créer des expériences interactives avec des outils plus accessibles. Le projet comprend notamment <strong>Unity Spark</strong>, une expérience de création dans le navigateur qui doit permettre de concevoir et partager des jeux sans avoir besoin de connaître auparavant Unity ou le développement de jeux.</p>
-          <p>Unity insiste également sur le fait que l'IA ne doit pas simplement générer un jeu complet en une seule instruction. L'idée est plutôt de donner au créateur un environnement dans lequel il peut construire, modifier, tester et améliorer progressivement son expérience.</p>
-        </div>
-
-        <div class="veille-block">
-          <h3>Technologies concernées</h3>
-          <div class="veille-tags">
-            <span class="veille-tag">IA générative</span>
-            <span class="veille-tag">Création assistée par IA</span>
-            <span class="veille-tag">Création dans le navigateur</span>
-            <span class="veille-tag">Moteur Unity</span>
-            <span class="veille-tag">Google AI</span>
-            <span class="veille-tag">Génération d'expériences interactives</span>
-          </div>
-        </div>
-
-        <div class="veille-block">
-          <h3>Impact sur le gaming</h3>
-          <p>Cette annonce peut réduire encore davantage la barrière d'entrée dans la création de jeux vidéo. Des personnes qui ne maîtrisent pas encore un moteur de jeu ou la programmation pourraient utiliser l'IA comme interface pour transformer une idée en expérience interactive, puis la modifier progressivement.</p>
-          <p>Pour les développeurs plus expérimentés, ces outils peuvent aussi accélérer le prototypage et certaines étapes de production. En revanche, la qualité finale dépend toujours des choix du créateur, de sa capacité à tester le jeu et de son contrôle sur ce qui est généré.</p>
-        </div>
-
-        <div class="veille-block">
-          <h3>Évolution de mon sujet</h3>
-          <div class="veille-conclusion">
-            <p>Ma première fiche montrait une IA qui devient un assistant capable de planifier, construire et tester dans Roblox Studio. Cette deuxième actualité montre une étape supplémentaire : l'IA commence à devenir <strong>une porte d'entrée complète vers la création de jeux</strong>, y compris pour des personnes qui ne sont pas encore développeuses.</p>
-          </div>
-          <p style="margin-top:14px">La tendance de ma veille devient donc plus claire : l'intelligence artificielle ne sert plus seulement à accélérer certaines tâches techniques. Les grands acteurs du secteur cherchent désormais à l'utiliser pour transformer directement la manière dont on commence, construit et partage un jeu vidéo.</p>
-        </div>
-
-        <div class="veille-block">
-          <h3>Sources</h3>
-          <p><strong>Source principale :</strong> Unity, « Google and Unity Partner on New AI Gaming Platform for the Next Era of Interactive Entertainment », 7 octobre 2026.</p>
-          <a class="veille-source-link" href="https://unity.com/news/google-and-unity-partner-on-new-ai-gaming-platform-for-the-next-era-of-interactive-entertainment" target="_blank" rel="noopener">Consulter l'annonce Unity →</a>
-          <br>
-          <a class="veille-source-link" href="https://unity.com/blog/why-we-built-unity-spark" target="_blank" rel="noopener">Consulter la présentation de Unity Spark →</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
+  </article>
+  <article class="veille-fiche">
+    <header class="veille-fiche-head"><span class="fiche-number">Fiche n°2</span><h2>Google et Unity veulent rendre la création de jeux par IA accessible à un public beaucoup plus large</h2><div class="veille-meta"><span>7 octobre 2026</span><span>Unity</span><span>Google AI & création de jeux</span></div></header>
+    <div class="veille-fiche-body">
+      <div class="veille-block"><h3>Résumé de l'information</h3>
+        <p>Le 7 octobre 2026, Google et Unity ont annoncé un partenariat stratégique autour d'une nouvelle plateforme de création de jeux intégrant l'intelligence artificielle. L'objectif annoncé est de réunir les technologies d'IA de Google avec l'expérience de Unity dans les moteurs et outils de création de jeux.</p>
+        <p>Unity présente cette initiative comme une nouvelle manière de créer des expériences interactives avec des outils plus accessibles. Le projet comprend notamment <strong>Unity Spark</strong>, une expérience de création dans le navigateur qui doit permettre de concevoir et partager des jeux sans avoir besoin de connaître auparavant Unity ou le développement de jeux.</p>
+        <p>Unity insiste également sur le fait que l'IA ne doit pas simplement générer un jeu complet en une seule instruction. L'idée est plutôt de donner au créateur un environnement dans lequel il peut construire, modifier, tester et améliorer progressivement son expérience.</p></div>
+      <div class="veille-block"><h3>Technologies concernées</h3><div class="veille-tags"><span class="veille-tag">IA générative</span><span class="veille-tag">Création assistée par IA</span><span class="veille-tag">Création dans le navigateur</span><span class="veille-tag">Moteur Unity</span><span class="veille-tag">Google AI</span><span class="veille-tag">Génération d'expériences interactives</span></div></div>
+      <div class="veille-block"><h3>Impact sur le gaming</h3>
+        <p>Cette annonce peut réduire encore davantage la barrière d'entrée dans la création de jeux vidéo. Des personnes qui ne maîtrisent pas encore un moteur de jeu ou la programmation pourraient utiliser l'IA comme interface pour transformer une idée en expérience interactive, puis la modifier progressivement.</p>
+        <p>Pour les développeurs plus expérimentés, ces outils peuvent aussi accélérer le prototypage et certaines étapes de production. En revanche, la qualité finale dépend toujours des choix du créateur, de sa capacité à tester le jeu et de son contrôle sur ce qui est généré.</p></div>
+      <div class="veille-block"><h3>Évolution de mon sujet</h3><div class="veille-conclusion"><p>Ma première fiche montrait une IA qui devient un assistant capable de planifier, construire et tester dans Roblox Studio. Cette deuxième actualité montre une étape supplémentaire : l'IA commence à devenir <strong>une porte d'entrée complète vers la création de jeux</strong>, y compris pour des personnes qui ne sont pas encore développeuses.</p></div><p style="margin-top:14px">La tendance de ma veille devient donc plus claire : l'intelligence artificielle ne sert plus seulement à accélérer certaines tâches techniques. Les grands acteurs du secteur cherchent désormais à l'utiliser pour transformer directement la manière dont on commence, construit et partage un jeu vidéo.</p></div>
+      <div class="veille-block"><h3>Sources</h3><p><strong>Source principale :</strong> Unity, « Google and Unity Partner on New AI Gaming Platform for the Next Era of Interactive Entertainment », 7 octobre 2026.</p><a class="veille-source-link" href="https://unity.com/news/google-and-unity-partner-on-new-ai-gaming-platform-for-the-next-era-of-interactive-entertainment" target="_blank" rel="noopener">Consulter l'annonce Unity →</a><br><a class="veille-source-link" href="https://unity.com/blog/why-we-built-unity-spark" target="_blank" rel="noopener">Consulter la présentation de Unity Spark →</a></div>
+    </div>
+  </article>
+</div></section>
 </section>
-</section>
+
+<!-- ================= CONTACT ================= -->
 <section id="contact" class="page">
 <section class="page-header container"><p class="eyebrow">05 · CONTACT</p><h1>Me contacter</h1><p>Mes informations professionnelles.</p></section>
 <section class="section container contact-grid">
@@ -388,4 +271,13 @@ footer{border-top:1px solid var(--line);padding:25px 0}.footer-content{display:f
 <div class="contact-card"><span>⌂</span><h2>GitHub</h2><p>Ajoute ici le lien vers ton profil GitHub.</p></div>
 <div class="contact-card"><span>in</span><h2>LinkedIn</h2><p>Ajoute ici ton profil LinkedIn si tu en as un.</p></div>
 </section>
-</section></main><footer><div class="container footer-content"><p>© 2026 Jason Tassoua-Liboukou · Portfolio E5 BTS SIO SISR</p><a href="#" onclick="showPage('contact');return false">Contact</a></div></footer><script>function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const p=document.getElementById(id);if(p)p.classList.add('active');document.querySelectorAll('.nav-links button').forEach(b=>b.classList.remove('active'));const n={accueil:'Accueil',apropos:'À propos',realisations:'Réalisations',competences:'Compétences',veille:'Veille',contact:'Contact'};document.querySelectorAll('.nav-links button').forEach(b=>{if(b.textContent===n[id])b.classList.add('active')});document.getElementById('nav').classList.remove('open');window.scrollTo(0,0)}function toggleMenu(){document.getElementById('nav').classList.toggle('open')}showPage('accueil');</script></body></html>
+</section>
+</main>
+<footer><div class="container footer-content"><p>© 2026 Jason Tassoua-Liboukou · Portfolio E5 BTS SIO SISR</p><a href="#" onclick="showPage('contact');return false">Contact</a></div></footer>
+<script>
+const NAV={accueil:'Accueil',apropos:'À propos',realisations:'Réalisations','tp-proxmox':'Réalisations','tp-vlan':'Réalisations',stage:'Réalisations',competences:'Compétences',veille:'Veille',contact:'Contact'};
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const p=document.getElementById(id);if(p)p.classList.add('active');document.querySelectorAll('.nav-links button').forEach(b=>b.classList.toggle('active',b.textContent===NAV[id]));document.getElementById('nav').classList.remove('open');window.scrollTo(0,0)}
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+function filterCards(type,btn){document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.project-card').forEach(c=>{c.style.display=(type==='all'||c.dataset.type===type)?'flex':'none'})}
+showPage('accueil');
+</script></body></html>
